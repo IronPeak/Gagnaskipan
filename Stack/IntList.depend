@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1432295277 source:c:\users\orri\desktop\gagnaskipan\intlist\main.cpp
+	<iostream>
+
+1432295952 source:c:\users\orri\desktop\gagnaskipan\queue\main.cpp
+	<iostream>
+
+1432296418 source:c:\users\orri\desktop\gagnaskipan\stack\main.cpp
+	<iostream>
+
