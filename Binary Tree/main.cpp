@@ -23,6 +23,7 @@ class IntBinaryTree
 private:
     NodePtr root;
 
+    //log(n)
     NodePtr& min(NodePtr& node)
     {
         if(node->leftChild != NULL)
@@ -33,14 +34,17 @@ private:
     }
 
 public:
+    //constant
     IntBinaryTree()
     {
         root = NULL;
     }
+    //linulegt
     ~IntBinaryTree()
     {
         remove_all(root);
     }
+    //linulegt
     void remove_all(NodePtr node) // should be private but placed here for readability
     {
         if(node != NULL)
@@ -50,6 +54,7 @@ public:
             delete node;
         }
     }
+    //log_n
     void add(int elem)
     {
         add(elem, root);
@@ -75,6 +80,7 @@ public:
             return;
         }
     }
+    //log_n
     void remove(int elem)
     {
         remove(elem, root);
@@ -119,6 +125,7 @@ public:
             return;
         }
     }
+    //log_n
     bool contains(int elem)
     {
         return contains(elem, root);
@@ -142,6 +149,7 @@ public:
             return true;
         }
     }
+    //linear
     void print()
     {
         print(root);

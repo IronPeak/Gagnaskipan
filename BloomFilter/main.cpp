@@ -31,10 +31,11 @@ private:
     vector<Hash> collection;
     int size;
 public:
+    //linear
     HashCollection(int size)
     {
         this->size = size;
-        for(int i = 0; i < size; i++)
+        for(int i = 1; i <= size; i++)
         {
             Hash h(i);
             collection.push_back(h);
@@ -44,10 +45,12 @@ public:
     {
 
     }
+    //constant
     int length()
     {
         return size;
     }
+    //constant
     unsigned int hashValue(string str, int index)
     {
         return collection[index].GetHash(str);
@@ -61,6 +64,7 @@ private:
     bool* filter;
     HashCollection* collection;
 public:
+    //linear
     BloomFilter(int size, int hashes)
     {
         this->size = size;
@@ -71,11 +75,13 @@ public:
             filter[i] = false;
         }
     }
+    //constant
     ~BloomFilter()
     {
         delete [] filter;
         delete collection;
     }
+    //Constant
     void Add(string str)
     {
         for(int i = 0; i < collection->length(); i++)
@@ -84,6 +90,7 @@ public:
             filter[index % size] = true;
         }
     }
+    //Constant
     bool Contains(string str)
     {
         for(int i = 0; i < collection->length(); i++)

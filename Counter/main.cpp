@@ -16,6 +16,7 @@ public:
     }
 };
 
+//constant
 bool operator < (const OurDataType& a, const OurDataType& b)
 {
     return b.frequency < a.frequency;
@@ -26,6 +27,7 @@ class Counter
 private:
     vector<OurDataType> words;
 public:
+    //linulegt
     void incr(string word)
     {
         for(unsigned int i = 0; i < words.size(); i++)
@@ -40,7 +42,7 @@ public:
         OurDataType w(word);
         words.push_back(w);
     }
-
+    //linulegt
     void get_by_freq()
     {
         //We can do this so easily because we made a custom < operator for OurDataType

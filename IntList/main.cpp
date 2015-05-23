@@ -27,6 +27,7 @@ private:
     int count;
 
 public:
+    //constant
     IntList()
     {
         head = NULL;
@@ -45,6 +46,7 @@ public:
         tail = NULL;
         count = 0;
     }
+    //constant
     void append(int elem)
     {
         NodePtr node = new IntNode(elem);
@@ -60,6 +62,7 @@ public:
         }
         count++;
     }
+    //linulegt
     void remove(int index)
     {
         if(0 <= index && index < count)

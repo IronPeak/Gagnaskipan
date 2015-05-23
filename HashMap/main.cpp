@@ -22,7 +22,7 @@ public:
         {
             hash += value[i];
         }
-        return (unsigned int)pow(hash, seed);
+        return hash; //(unsigned int)pow(hash, seed);
     }
 };
 
@@ -34,6 +34,7 @@ private:
     int capacity;
     int count;
 
+    //linulegt
     void grow()
     {
         if((double)count / (double)capacity > 0.8 || count == capacity)
@@ -72,12 +73,14 @@ public:
     }
     ~HashMapOpenAddressing()
     {
+        delete hash;
         for(int i = 0; i < capacity; i++)
         {
             delete map[i];
         }
         delete [] map;
     }
+    //O(2n)
     void Add(string str)
     {
         grow();
@@ -100,6 +103,7 @@ public:
             }
         }
     }
+    //linulegt
     void Remove(string str)
     {
         int index = hash->GetHash(str);
@@ -118,6 +122,7 @@ public:
             }
         }
     }
+    //linulegt
     bool Contains(string str)
     {
         int index = hash->GetHash(str);
@@ -133,6 +138,7 @@ public:
             }
         }
     }
+    //linulegt
     void Print()
     {
         for(int i = 0; i < capacity; i++)

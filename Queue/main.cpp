@@ -48,6 +48,7 @@ public:
         tail = NULL;
         count = 0;
     }
+    //constant
     void push(int elem)
     {
         NodePtr node = new IntNode(elem);
@@ -64,6 +65,7 @@ public:
         }
         count++;
     }
+    //constant
     void pop()
     {
         if(0 < count)
@@ -76,6 +78,7 @@ public:
         }
         throw EmptyException();
     }
+    //constant
     int front()
     {
         if(0 < count)
