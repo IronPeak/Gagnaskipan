@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1432381845 source:c:\users\orri\desktop\gagnaskipan\counter\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
