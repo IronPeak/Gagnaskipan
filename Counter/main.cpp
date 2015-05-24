@@ -16,10 +16,30 @@ public:
     }
 };
 
-//constant
-bool operator < (const OurDataType& a, const OurDataType& b)
+
+bool alphabetical(string a, string b)
 {
-    return b.frequency < a.frequency;
+    int x = min(a.length(), b.length());
+
+    for(int i = 0; i < x; i++)
+    {
+        if(a[i] > b[i])
+            return false;
+    }
+
+    return true;
+}
+
+bool myComparer(const OurDataType& a, const OurDataType& b)
+{
+    if(a.frequency == b.frequency)
+    {
+        return alphabetical(a.word, b.word);
+    }
+    else
+    {
+        return b.frequency < a.frequency;
+    }
 }
 
 class Counter
@@ -46,7 +66,7 @@ public:
     void get_by_freq()
     {
         //We can do this so easily because we made a custom < operator for OurDataType
-        sort(words.begin(), words.end());
+        sort(words.begin(), words.end(), myComparer);
         for(unsigned int i = 0; i < words.size(); i++)
         {
             cout << words[i].word << " " << words[i].frequency << endl;
