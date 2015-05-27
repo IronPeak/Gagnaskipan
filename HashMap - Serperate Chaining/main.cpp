@@ -164,6 +164,10 @@ public:
             {
                 cout << "NULL" << endl;
             }
+            else if(map[i]->size() == 0)
+            {
+                cout << "EMPTY" << endl;
+            }
             else
             {
                 for(unsigned int j = 0; j < map[i]->size(); j++)
@@ -204,7 +208,14 @@ int main()
         {
             string input;
             cin >> input;
-            map.Contains(input);
+            if(map.Contains(input))
+            {
+                cout << "Yes, the map contains: " << input << endl;
+            }
+            else
+            {
+                cout << "No, the map does not contains: " << input << endl;
+            }
         }
         map.Print();
     }

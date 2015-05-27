@@ -179,7 +179,14 @@ int main()
         {
             string input;
             cin >> input;
-            map.Contains(input);
+            if(map.Contains(input))
+            {
+                cout << "Yes, the map contains: " << input << endl;
+            }
+            else
+            {
+                cout << "No, the map does not contains: " << input << endl;
+            }
         }
         map.Print();
     }
