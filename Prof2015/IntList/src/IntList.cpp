@@ -37,10 +37,7 @@ void IntList::insert(unsigned int ind, int n)
         }
         else if(ind == 0)
         {
-            NodePtr node = new IntNode(n);
-            node->link = head;
-            head = node;
-            count++;
+            prepend(n);
         }
         else
         {
@@ -137,16 +134,17 @@ void IntList::remove(int n)
 
 void IntList::reverse()
 {
-    count = 0;
-    NodePtr oldHead = head;
-    head = tail = NULL;
-    NodePtr temp = oldHead;
-    while(temp != NULL)
+    tail = head;
+    NodePtr current = head->link;
+    head->link = NULL;
+    for(int i = 1; i < count; i++)
     {
-        prepend(temp->value);
-        temp = temp->link;
+        NodePtr next = current->link;
+        current->link = head;
+        head = current;
+        current = next;
     }
-    clear(oldHead);
+    tail->link = NULL;
 }
 
 void IntList::prepend(int n)
