@@ -30,6 +30,10 @@ int main()
             cin >> n;
             tree.print_by_values(n);
         }
+        if(cmd == "sum")
+        {
+            cout << tree.sum_values() << endl;
+        }
         tree.print();
     }
     return 0;
