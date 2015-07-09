@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1436477611 source:c:\users\hrafnkell\desktop\intlist\main.cpp
+	<iostream>
+	<IntList.h>
+
+1436479062 source:c:\users\hrafnkell\desktop\intlist\src\intlist.cpp
+	"IntList.h"
+
+1436478765 c:\users\hrafnkell\desktop\intlist\include\intlist.h
+	<iostream>
+

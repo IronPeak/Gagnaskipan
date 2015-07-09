@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1436482804 source:c:\users\hrafnkell\desktop\map\main.cpp
+	<iostream>
+	"Map.h"
+
+1436482778 source:c:\users\hrafnkell\desktop\map\src\map.cpp
+	"Map.h"
+
+1436482741 c:\users\hrafnkell\desktop\map\include\map.h
+	<iostream>
+

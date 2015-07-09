@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1385316878 source:c:\users\hrafnkell\desktop\queue\main.cpp
+	<iostream>
+
+1436466385 source:c:\users\hrafnkell\desktop\queue\src\pqueue.cpp
+	"pqueue.h"
+
+1436467383 c:\users\hrafnkell\desktop\queue\include\pqueue.h
+	<string>
+

@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1385316878 source:c:\users\hrafnkell\desktop\bloomfilter\main.cpp
+	<iostream>
+
+1436468356 source:c:\users\hrafnkell\desktop\bloomfilter\src\bloomfilter.cpp
+	"BloomFilter.h"
+
+1436468315 c:\users\hrafnkell\desktop\bloomfilter\include\bloomfilter.h
+	<vector>
+	<string>
+
