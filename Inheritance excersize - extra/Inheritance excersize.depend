@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1436447754 source:c:\users\hrafnkell\desktop\inheritance excersize\src\binarytree.cpp
+	"BinaryTree.h"
+
+1436448440 c:\users\hrafnkell\desktop\inheritance excersize\include\binarytree.h
+
+1436463378 source:c:\users\hrafnkell\desktop\inheritance excersize\main.cpp
+	<iostream>
+	<vector>
+	<math.h>
+

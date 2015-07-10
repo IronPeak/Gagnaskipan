@@ -2,11 +2,13 @@
 #define PQUEUE_H
 
 #include <string>
+#include <iostream>
 
 using namespace std;
 
 struct Node
 {
+public:
     int priority;
     string value;
     Node* link;
@@ -27,6 +29,7 @@ class pqueue
         ~pqueue();
         void enqueue(string element, int n);
         string dequeue();
+        void print();
     private:
         NodePtr first;
 };

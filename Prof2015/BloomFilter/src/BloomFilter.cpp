@@ -2,20 +2,36 @@
 
 BloomFilter::BloomFilter(int size, int hashes)
 {
-    //ctor
+    this->size = size;
+    this->hashes = hashes;
+    filter = new bool[size];
+    for(int i = 0; i < size; i++)
+    {
+        filter[i] = false;
+    }
+    collection = new HashCollection(hashes);
 }
 
 BloomFilter::~BloomFilter()
 {
-    //dtor
+    delete [] filter;
+    delete collection;
 }
 
-void add(string s)
+void BloomFilter::add(string s)
 {
-
+    for(int i = 0; i < hashes; i++)
+    {
+        int hash = collection->HashValue(s, i);
+        filter[hash % size] = true;
+    }
 }
 
-bool contains(string s)
+bool BloomFilter::contains(string s)
 {
-    return false;
+    for(int i = 0; i < hashes; i++)
+    {
+        int hash = collection->HashValue(s, i);
+        filter[hash % size] = true;
+    }
 }

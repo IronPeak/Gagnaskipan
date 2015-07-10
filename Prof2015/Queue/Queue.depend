@@ -8,3 +8,14 @@
 1436467383 c:\users\hrafnkell\desktop\queue\include\pqueue.h
 	<string>
 
+1436539499 source:c:\users\hrafnkell\desktop\gagnaskipan\prof2015\queue\main.cpp
+	<iostream>
+	"pqueue.h"
+
+1436539707 source:c:\users\hrafnkell\desktop\gagnaskipan\prof2015\queue\src\pqueue.cpp
+	"pqueue.h"
+
+1436539509 c:\users\hrafnkell\desktop\gagnaskipan\prof2015\queue\include\pqueue.h
+	<string>
+	<iostream>
+

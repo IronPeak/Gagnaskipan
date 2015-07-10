@@ -59,7 +59,10 @@ class BloomFilter
         void add(string s);
         bool contains(string s);
     private:
+        int size;
+        int hashes;
         bool* filter;
+        HashCollection* collection;
 };
 
 #endif // BLOOMFILTER_H

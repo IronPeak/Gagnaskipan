@@ -103,6 +103,15 @@ public:
         }
         return true;
     }
+
+    void print()
+    {
+        for(int i = 0; i < size; i++)
+        {
+            cout << filter[i];
+        }
+        cout << endl;
+    }
 };
 
 int main()
@@ -134,6 +143,7 @@ int main()
                 cout << "Definetly not in bloomfilter" << endl;
             }
         }
+        bloom.print();
     }
 
     return 0;

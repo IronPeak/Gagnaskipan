@@ -30,7 +30,7 @@ bool alphabetical(string a, string b)
     return true;
 }
 
-bool myComparer(const OurDataType& a, const OurDataType& b)
+bool operator < (OurDataType a, OurDataType b)
 {
     if(a.frequency == b.frequency)
     {
@@ -66,7 +66,7 @@ public:
     void get_by_freq()
     {
         //We can do this so easily because we made a custom < operator for OurDataType
-        sort(words.begin(), words.end(), myComparer);
+        sort(words.begin(), words.end());
         for(unsigned int i = 0; i < words.size(); i++)
         {
             cout << words[i].word << " " << words[i].frequency << endl;
