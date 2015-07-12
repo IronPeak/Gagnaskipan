@@ -90,6 +90,22 @@ public:
         throw IndexOutOfRangeException();
     }
 
+    void remove_even()
+    {
+        for(int i = 0; i < count; i++)
+        {
+            remove(i);
+        }
+    }
+
+    void remove_odd()
+    {
+        for(int i = 1; i < count; i++)
+        {
+            remove(i);
+        }
+    }
+
     friend ostream& operator<< (ostream &out, IntList &list);
 };
 
@@ -123,6 +139,14 @@ int main()
             int index;
             cin >> index;
             list.remove(index);
+        }
+        if(cmd == "remove_odd")
+        {
+            list.remove_odd();
+        }
+        if(cmd == "remove_even")
+        {
+            list.remove_even();
         }
         cout << list << endl;
     }

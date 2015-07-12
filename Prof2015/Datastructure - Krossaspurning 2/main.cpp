@@ -51,6 +51,11 @@ private:
 
     bool contains(int* array, int count, int value)
     {
+        for(int i = 0; i < count; i++)
+        {
+            cout << array[i] << " ";
+        }
+        cout << endl;
         if(count == 0)
         {
             return false;
@@ -77,11 +82,10 @@ private:
             }
             if(value > array[index])
             {
-                return contains(&array[index + 1], index + 1, value);
+                return contains(&array[index + 1], index, value);
             }
             return true;
         }
-        return true;
     }
 
 public:
