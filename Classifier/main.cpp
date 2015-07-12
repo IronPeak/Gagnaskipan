@@ -12,7 +12,7 @@ private:
 public:
     Classifier()
     {
-
+        lists = vector<list<string> >(26);
     }
     void Add(string str)
     {
@@ -53,6 +53,23 @@ public:
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    Classifier C;
+    string cmd;
+    while(cmd != "quit")
+    {
+        cin >> cmd;
+        if(cmd == "add")
+        {
+            string str;
+            cin >> str;
+            C.Add(str);
+        }
+        if(cmd == "print")
+        {
+            char c;
+            cin >> c;
+            C.print_letter(c);
+        }
+    }
     return 0;
 }

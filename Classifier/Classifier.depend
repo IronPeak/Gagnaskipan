@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1436734808 source:c:\users\hrafnkell\desktop\gagnaskipan\classifier\main.cpp
+	<algorithm>
+	<iostream>
+	<vector>
+	<list>
+
